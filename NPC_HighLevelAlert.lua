@@ -25,7 +25,7 @@ frame:SetScript("OnEvent", function(self, event, unit)
             local isElite = npcClassification == "elite" or npcClassification == "rareelite" or npcClassification == "worldboss"
             
             -- Check if the unit's level is higher than the player's level or if the unit is elite
-            if npcLevel >= playerLevel + 3 or isElite then
+            if npcLevel >= playerLevel + 1 or isElite then
                 local npcName = UnitName(unit)
                 -- Display a raid warning and play a sound
                 RaidNotice_AddMessage(RaidWarningFrame, (isElite and npcClassification.." " or "")..npcName.."("..npcLevel..") close", ChatTypeInfo["RAID_WARNING"])
